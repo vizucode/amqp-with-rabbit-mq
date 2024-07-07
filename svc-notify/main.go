@@ -39,6 +39,7 @@ func main() {
 	for d := range dlv {
 		var body map[string]interface{}
 
+		fmt.Println("service notify received data...")
 		err := json.Unmarshal(d.Body, &body)
 		if err != nil {
 			log.Println(err)
